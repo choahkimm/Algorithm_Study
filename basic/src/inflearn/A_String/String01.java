@@ -1,6 +1,5 @@
 package inflearn.A_String;
 
-import java.util.Locale;
 import java.util.*;
 
 // 백준 방식이되, solution은 프로그래머스 방식..
