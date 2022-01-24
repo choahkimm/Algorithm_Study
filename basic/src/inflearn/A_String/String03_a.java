@@ -38,6 +38,8 @@ public class String03_a {
         if(str.length() > max) answer=str; // 마지막 단어 처리!
 
         return answer;
+
+        // 참고 : MIN_VALUE 말고 0 해도 됨
     }
 
     public static void main(String[] args) throws IOException {
