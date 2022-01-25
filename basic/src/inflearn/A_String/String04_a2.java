@@ -14,7 +14,7 @@ public class String04_a2 {
             char[] s = x.toCharArray(); //단어를 갖는 String이 문자배열화 됨
 
             // [] [] [] [] []
-            // lt          rt
+            // lt       rt
 
             int lt=0, rt=x.length()-1;
             while (lt<rt){

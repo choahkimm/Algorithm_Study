@@ -3,12 +3,15 @@ package inflearn.A_String;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 public class String04 {
     // 4. 단어 뒤집기 -- StringBuilder이용법 또는 직접 뒤집기
 
     public static String solution(String str){
         String answer = "";
+
+
 
         return answer;
     }
