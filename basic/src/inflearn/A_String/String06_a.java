@@ -18,7 +18,6 @@ public class String06_a {
                 answer += str.charAt(i);
             }
         }
-
         return answer;
     }
 

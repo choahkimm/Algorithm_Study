@@ -2,7 +2,7 @@ package inflearn.A_String;
 
 import java.util.Scanner;
 
-public class Template {
+public class A_Template {
     public static String solution(String str){
         String answer = "";
 
