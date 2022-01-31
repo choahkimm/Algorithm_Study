@@ -1,6 +1,43 @@
 package inflearn.A_String;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class String11 {
+    // 11. 문자열 압축
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String input = sc.next();
+        input = input +" ";
+        int cnt = 1;
+
+        String answer="";
+        for(int i=0; i<input.length()-1; i++){
+            if(input.charAt(i)==input.charAt(i+1)){
+               cnt++;
+            }else {
+                answer += input.charAt(i);
+
+                if(cnt>1){
+                    //answer += String.valueOf(cnt);
+                    answer += cnt;
+                }
+                cnt =1;
+            }
+        }
+
+        System.out.println(answer);
+
+
+
+
+        // AABCDD -> A2BCD2
+        // 012345
+
+        System.out.println();
+        }
+
+
 }
 /*
 11. 문자열 압축

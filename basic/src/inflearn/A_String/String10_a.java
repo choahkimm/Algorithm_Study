@@ -8,16 +8,50 @@ public class String10_a {
     // 우측에 있는 가까운 문자 t로부터의 거리를 구한다.
     // 둘 중 작은 값이 최소 거리
 
-    public static String solution(String str){
-        String answer = "";
+    // p=1000 으로 두는 이유 (100을 넘지 않기에 100도 무방)
+    // A문자처럼 왼쪽이나 오른쪽에 타겟문자가 없을 경우 거리를 큰 숫자로 해야
+    // 반대방향의 거리가 작은 값이 되어 선택되게 됩니다.
+    // 그래서 p=1000으로 넉넉하게 잡습니다.
+    // 입력되는 문자열의 길이가 100을 넘지 않기 때문에 1000이면 넉넉하게 큽니다.
 
+    public static int[] solution(String str, char t){
+        int[] answer = new int[str.length()];
+        int p = 1000;
+
+        // 왼쪽 t로 부터 떨어진 거리
+        for(int i=0; i< str.length(); i++){
+            if(str.charAt(i)==t){
+                p=0;
+                answer[i]=p;
+            }
+            else {
+                p++;
+                answer[i]=p;
+            }
+        }
+
+        // 오른쪽 t로 부터 떨어진 거리
+        p=1000;
+        for(int i= str.length()-1; i>=0; i--){
+            if(str.charAt(i)==t){
+                p=0;
+            }
+            else {
+                p++;
+                // 기존값과 비교하여 작은 값 넣기
+                answer[i] = Math.min(answer[i],p);
+            }
+        }
         return answer;
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String str = sc.next();
-        System.out.println(solution(str));
+        char c = sc.next().charAt(0);
+        for(int x: solution(str,c)){
+            System.out.print(x + " ");
+        }
     }
 }
 
