@@ -9,12 +9,13 @@ public class Array03 {
         int num = sc.nextInt(); // 게임 횟수
         int arr[][] = new int[2][num];
 
-        for(int i=0; i<2; i++){
-            for(int j=0; j<num; j++){
-                arr[i][j] = sc.nextInt();
+        for(int i=0; i<num; i++){
+            int result = arr[0][i]-arr[1][i];
+            // A가 이기는 경우
+            if((result==-2) || (result==1)){
 
-                System.out.println(arr[i][j]);
             }
+
         }
 
     }
