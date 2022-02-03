@@ -1,22 +1,37 @@
 package inflearn.B_Array;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Array03 {
     public static void main(String[] args) {
+        // 3.  가위 바위 보
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt(); // 게임 횟수
-        int arr[][] = new int[2][num];
+        int a[] = new int[num];
+        int b[] = new int[num];
+
+        String answer = "";
+        for(int i=0; i<num; i++){
+            a[i]=sc.nextInt();
+        }
+        for(int i=0; i<num; i++){
+            b[i]=sc.nextInt();
+        }
 
         for(int i=0; i<num; i++){
-            int result = arr[0][i]-arr[1][i];
-            // A가 이기는 경우
-            if((result==-2) || (result==1)){
+            int result = a[i] - b[i];
 
+            if((result==-2) || (result==1)){ // A가 이기는 경우
+                answer += "A\n";
             }
-
+            else if(result == 0){ // 비기는 경우
+                answer += "D\n";
+            }
+            else{
+                answer += "B\n";
+            }
         }
+        System.out.println(answer);
 
     }
     /* 사람 A,B 비기면 D
