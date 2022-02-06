@@ -1,8 +1,6 @@
 package inflearn.B_Array;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import java.util.Scanner;
 
 public class Array05 {
@@ -10,27 +8,23 @@ public class Array05 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int[] arr = new int[n];
+        ArrayList<Integer> answer = new ArrayList<>();
+
+        int count=0;
 
         for(int i=2; i<n; i++){
-            for(int j=2; j<n; j++){
-                if(i%j!=0) arr[i] = i;
-                else break;
-
+            for(int j=2; j<=i; j++){
+                if(i%j==0) {
+                    count++;
+                }
             }
+            if(count==1){
+                answer.add(i);
+            }
+            count =0;
         }
-        for(int x : arr){
-            System.out.println(x);
-        }
-        System.out.println();
 
-        ArrayList<Integer> answer = new ArrayList<>();
-        for(int x : arr){
-            if(x!=0)
-                answer.add(x);
-        }
-        System.out.println(answer);
-        System.out.println(answer.size() +1);
+        System.out.println(answer.size());
     }
 }
 
