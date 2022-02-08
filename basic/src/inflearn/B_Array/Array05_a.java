@@ -9,11 +9,13 @@ public class Array05_a {
 
     public static int solution(int n ){
         int answer=0;
-        int[] ch= new int[n+1];
+        int[] ch= new int[n+1]; //5
+
         for(int i=2; i<n; i++){
             if(ch[i]==0){
                 answer++;
-                for(int j=i; j<=n; j=j+i){
+                for(int j=i; j<=n; j=j+i){ // i의 배수들 체크, 배수에 수를 넣어버림
+                    // 2의 배수, 3의 배수.. 이런 애들은 0이 아니므로 answer 증가 X
                     ch[j]=i;
                 }
             }
