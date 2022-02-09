@@ -14,30 +14,32 @@ public class Array06 {
         int num = sc.nextInt();
         int[] arr = new int[num];
 
-        boolean isPrime = true;
 
         ArrayList list= new ArrayList();
         for(int i=0; i<num; i++){
             arr[i] = sc.nextInt(); // 입력한 수 배열 arr에 저장
             // 하나하나 배열을 돌면서 소수인지 판별
             // =>소수 n은 2~n-1까지 존재하는 소수들 중 어떤 것이라도 나누어떨어지지 않는다.
+        }
 
-            for(int j=2; j<arr[i]; j++){
-                if(arr[i] % j == 0) {
-                    isPrime = false;
-                    System.out.println("arr["+i +"]=" + arr[i] +", j는 "+j + ", 나눠서 나머지는 " + (arr[i]%j));
+        boolean isPrime = false;
 
+        for(int n : arr){
+            for(int j=2; j<n; j++){
+                System.out.println(n);
+
+                if(n % j == 0) { // 나누어지는 수가 있을 경우
+                    isPrime = true;
                     break;
-
                 }
             }
 
             if(isPrime){
-                list.add(arr[i]);
-                //System.out.println(arr[i]+"=> 소수");
+                //list.add(n);
+                System.out.println(n+"=> 소수");
             }else {
-                list.add("잉");
-                //System.out.println(arr[i]+"=> 소수 아님");
+                //list.add("잉");
+                System.out.println(n+"=> 소수 아님");
             }
         }
         System.out.println(list);
