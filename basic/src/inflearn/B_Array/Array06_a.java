@@ -18,9 +18,9 @@ public class Array06_a {
             int tmp=arr[i]; //tmp=153
             int res=0;
             while(tmp>0){ // 숫자 뒤집기
-                int t = tmp%10; // t= 3
-                res=res*10+t; // res = 3
-                tmp=tmp/10; // tmp = 15
+                int t = tmp%10; // t= 3, 5, 1
+                res=res*10+t; // res = 3, 30+5, 35*10 +1 = 351
+                tmp=tmp/10; // tmp = 15, 1
             }
             if(isPrime(res)) answer.add(res);
         }
