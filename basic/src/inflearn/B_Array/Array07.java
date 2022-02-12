@@ -1,8 +1,39 @@
 package inflearn.B_Array;
 
-public class Array07 {
-    public static void main(String[] args) {
+import java.util.Arrays;
+import java.util.Scanner;
 
+public class Array07 {
+    public static int[] solution(int n, int[] arr){
+        int[] answer = new int[n];
+        answer[0] = arr[0];
+
+        int score =0;
+        for(int i=1; i<n; i++){
+            if(arr[i]== 1){ // 맞은 경우
+                    score += 1;
+                if(arr[i-1]==1){
+                    score +=1;
+                }
+            }
+            answer[i] = score;
+
+            score=0;
+        }
+
+        System.out.println(score);
+
+        return answer;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr=new int[n];
+
+        for(int i=0; i<n; i++){
+            arr[i] = sc.nextInt();
+        }
+        System.out.println(Arrays.toString(solution(n, arr)));
     }
 }
 
