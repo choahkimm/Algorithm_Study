@@ -1,9 +1,43 @@
 package inflearn.B_Array;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class Array08 {
     //8. 등수구하기
-    public static void main(String[] args) {
+    public static int[] solution(int n, int[] arr) {
+        int[] answer = new int[n];
 
+        int rank=1;
+        for(int i=0; i<n; i++){ // 87 89 92 100 76
+            for(int j=1; j<n-i; j++){
+                if(arr[i]<arr[i+j] ){
+                    rank++;
+                }
+//                if(arr[n-1]<arr[n-1-j]){
+//                    rank++;
+//                }
+            }
+            answer[i]=rank;
+            rank=1;
+        }
+        //System.out.println(Arrays.toString(answer));
+
+        return answer;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+
+        for(int i=0; i<n; i++){
+            arr[i] = sc.nextInt();
+        }
+
+        for(int x : solution(n, arr)){
+            System.out.print(x+" ");
+        }
     }
 }
 
