@@ -1,6 +1,5 @@
 package inflearn.B_Array;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Array07 {
@@ -12,17 +11,15 @@ public class Array07 {
         for(int i=1; i<n; i++){
             if(arr[i]== 1){ // 맞은 경우
                     score += 1;
-                if(arr[i-1]==1){
+                if(arr[i-1] == score){
                     score +=1;
                 }
+                answer[i] = score;
             }
-            answer[i] = score;
-
-            score=0;
+            else{
+                score=0;
+            }
         }
-
-        System.out.println(score);
-
         return answer;
     }
     public static void main(String[] args) {
@@ -33,7 +30,13 @@ public class Array07 {
         for(int i=0; i<n; i++){
             arr[i] = sc.nextInt();
         }
-        System.out.println(Arrays.toString(solution(n, arr)));
+        //System.out.println(Arrays.toString(solution(n, arr)));
+
+        int sum=0;
+        for(int i : solution(n,arr)){
+            sum+=i;
+        }
+        System.out.println(sum);
     }
 }
 
