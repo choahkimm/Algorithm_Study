@@ -1,6 +1,5 @@
 package inflearn.B_Array;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Array08 {
@@ -8,16 +7,21 @@ public class Array08 {
     public static int[] solution(int n, int[] arr) {
         int[] answer = new int[n];
 
-        int rank=1;
-//        for(int i=0; i<n; i++){ // 87 89 92 100 76
-//            for(int j=1; j<n-i; j++){
-//                if(arr[i]<arr[i+j] ){
-//                    rank++;
-//                }
-//            }
-//            answer[i]=rank;
-//            rank=1;
-//        }
+        for(int i=0; i<n; i++){ // 87 89 92 100 76
+            int rank=1;
+            for(int j=0; j<n; j++){
+               int my = arr[i];
+               int other = arr[j];
+
+               if(i==j){
+                   continue;
+               }
+               if(other > my){
+                   rank++;
+               }
+            }
+            answer[i]=rank;
+        }
 
         return answer;
     }
