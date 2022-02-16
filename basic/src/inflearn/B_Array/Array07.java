@@ -20,6 +20,7 @@ public class Array07 {
             else{
                 score=0;
             }
+            // 생각해보니 그냥 점수의 합만 출력되면 됨(Int) 굳이 배열로 뽑지 않아도 되는..
         }
         return answer;
     }

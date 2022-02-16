@@ -9,19 +9,15 @@ public class Array08 {
         int[] answer = new int[n];
 
         int rank=1;
-        for(int i=0; i<n; i++){ // 87 89 92 100 76
-            for(int j=1; j<n-i; j++){
-                if(arr[i]<arr[i+j] ){
-                    rank++;
-                }
-//                if(arr[n-1]<arr[n-1-j]){
+//        for(int i=0; i<n; i++){ // 87 89 92 100 76
+//            for(int j=1; j<n-i; j++){
+//                if(arr[i]<arr[i+j] ){
 //                    rank++;
 //                }
-            }
-            answer[i]=rank;
-            rank=1;
-        }
-        //System.out.println(Arrays.toString(answer));
+//            }
+//            answer[i]=rank;
+//            rank=1;
+//        }
 
         return answer;
     }
