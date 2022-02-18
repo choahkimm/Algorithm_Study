@@ -1,8 +1,8 @@
-package inflearn.A_String;
+package inflearn;
 
 import java.util.Scanner;
 
-public class A_Template {
+public class Template {
     public static String solution(String str){
         String answer = "";
 

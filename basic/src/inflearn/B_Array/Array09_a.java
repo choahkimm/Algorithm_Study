@@ -4,8 +4,10 @@ import java.util.Scanner;
 
 public class Array09_a {
     public static int solution(int n, int[][] arr){
-        int answer=-2147000000;
+        int answer=-2147000000; //MIN_VALUE
         int sum1=0, sum2=0;
+
+        // 행 합, 열 합
         for(int i=0; i<n; i++){
             sum1=sum2=0;
             for(int j=0; j<n; j++){
@@ -14,7 +16,11 @@ public class Array09_a {
             }
             answer=Math.max(answer, sum1);
             answer=Math.max(answer, sum2);
+
+            //Math.Max 메서드 : 두 변수 중 더 큰 값을 반환
         }
+
+        // 우하향 대각선 합, 우상향 대각선 합
         sum1=sum2=0;
         for(int i=0; i<n; i++){
             sum1+=arr[i][i];

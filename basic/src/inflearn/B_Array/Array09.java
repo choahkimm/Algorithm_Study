@@ -24,16 +24,8 @@ public class Array09 {
                 square[i][j] = sc.nextInt();
             }
         }
-        int rowSum = 0;
+        int
         // 배열의 값들을 더해주기
-        for(int i=0; i<5; i++){
-            for(int j=0; j<5; j++){
-                System.out.print(square[i][j] + "\t");
-                rowSum = square[i][j];
-                System.out.println(rowSum);
-                answer.add(rowSum);
-            }
-        }
 
 
     // 행의 합 5개
