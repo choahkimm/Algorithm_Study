@@ -24,7 +24,7 @@ public class Array09 {
                 square[i][j] = sc.nextInt();
             }
         }
-        int
+
         // 배열의 값들을 더해주기
 
 
