@@ -15,7 +15,7 @@ public class Array09 {
     30 31 32 33 34
     40 41 42 43 44
      */
-        ArrayList<Integer> answer = new ArrayList();
+        //ArrayList<Integer> answer = new ArrayList();
         int[][] square = new int[n][n];
 
         //  입력한 내용을 정사각혐의 배열에 추가
@@ -26,13 +26,34 @@ public class Array09 {
         }
 
         // 배열의 값들을 더해주기
-
-
     // 행의 합 5개
+        int lineSum=0;
     // 열의 합 5개
+        int rowSum=0;
     // 우하향 대각선 합 1개
+        int downSum=0;
     // 우상향 대각선 합 1개
+        int upSum=0;
+
+        for(int i=0; i<n; i++){
+            downSum=upSum=0;
+            for(int j=0; j<n; j++){
+                downSum+=square[i][j];
+                upSum+=square[j][i];
+            }
+        }
+        int answer = Math.max(lineSum,rowSum);
+
+        for(int i=0; i<n; i++){
+            lineSum+=square[i][i];
+            rowSum+=square[i][n-1-i];
+        }
+        answer = Math.max(answer,lineSum);
+        answer = Math.max(answer,rowSum);
+
+        System.out.println(answer);
     }
+
 }
 
 /*
