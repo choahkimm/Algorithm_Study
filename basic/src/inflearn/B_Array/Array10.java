@@ -14,44 +14,70 @@ public class Array10 {
     20 21 22 23 24
     30 31 32 33 34
     40 41 42 43 44
-
-    index 1~3, 1~3 부분을 구하면 되는데 위 아래 왼쪽 오른쪽 좌표 구하자
-    11 12 13
-    21 22 23
-    31 32 33
-
-    n-2 = 3 까지고
-    [i-1, j]
-    [i+1, j]
-    [i, j-1]
-    [i, j+1]
-
      */
 
         int[][] square = new int[n][n];
 
         //  입력한 내용을 정사각혐의 배열에 추가
-        for(int i=0; i<5; i++){
-            for(int j=0; j<5; j++){
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
                 square[i][j] = sc.nextInt();
             }
         }
 
+        int[] x = {-1, 0, 1, 0};
+        int[] y = {0, 1, 0, -1};
+        // x,y 축 생각해서 왼 오 위 아래 이동
 
-        int answer=0;
-        for(int i=1; i<n-2; i++){
-            for(int j=1; j<n-2; j++){
-                if((square[i][j]>square[i-1][j]) ||
-                        (square[i][j]>square[i+1][j]) ||
-                        (square[i][j]>square[i][j-1]) ||
-                        (square[i][j]>square[i][j+1])
-                ) answer++;
+        int answer = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                boolean flag = true;
+                for (int k = 0; k < 4; k++) {
+                    int nx = i + x[k];
+                    int ny = j + y[k];
+                    if (nx >= 0 && nx < n && ny < n && ny >= 0 && square[nx][ny] >= square[i][j]) {
+                            flag = false;
+                            break;
+                    }
+                }
+                if (flag) answer++;
             }
         }
         System.out.println(answer);
 
     }
+
 }
+
+
+
+        // 실패 사례 ^^..
+        // 생각해보니. 애초에 input되는 건 0 안쪽 숫자잖아..
+//        int answer=0;
+//        for(int i=1; i<n-2; i++){
+//            for(int j=1; j<n-2; j++){
+//                if((square[i][j]>square[i-1][j]) ||
+//                        (square[i][j]>square[i+1][j]) ||
+//                        (square[i][j]>square[i][j-1]) ||
+//                        (square[i][j]>square[i][j+1])
+//                ) answer++;
+//            }
+//        }
+//        System.out.println(answer);
+
+        /*
+            index 1~3, 1~3 부분을 구하면 되는데 위 아래 왼쪽 오른쪽 좌표 구하자
+    11 12 13
+    21 22 23
+    31 32 33
+
+    [i-1, j]
+    [i+1, j]
+    [i, j-1]
+    [i, j+1]
+         */
+
 
 
 /*
@@ -85,15 +111,10 @@ public class Array10 {
 예시 입력 1
 
 5
-
 5 3 7 2 3
-
 3 7 1 6 1
-
 7 2 5 3 4
-
 4 3 6 4 1
-
 8 7 3 5 2
 
 
