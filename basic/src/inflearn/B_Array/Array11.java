@@ -17,8 +17,32 @@ public class Array11 {
             }
         }
 
+        // 배열 안에서 같은 반 최대 횟수 구하기
+        /*
+5
+2 3 1 7 3
+4 1 9 6 8
+5 5 2 4 4
+6 5 2 6 7
+8 4 2 2 2
 
-        //
+00
+10
+20
+30
+40
+
+         */
+
+        int max = 0;
+        int cnt = 0;
+        for(int i=0; i<=5; i++){
+            for(int j=0; j<n; j++){
+                if(inputs[i][j] == inputs[i][j+1]){
+                    cnt++;
+                }
+            }
+        }
     }
 }
 
