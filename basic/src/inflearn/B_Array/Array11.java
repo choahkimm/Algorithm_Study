@@ -18,6 +18,16 @@ public class Array11 {
         }
 
         // 배열 안에서 같은 반 최대 횟수 구하기
+        int max=0;
+        for(int i=1; i<n; i++){
+            for(int j=0; j<n; j++){
+                for(int k=0; k<6; k++){
+
+                }
+            }
+        }
+
+
         /*
 5
 2 3 1 7 3
