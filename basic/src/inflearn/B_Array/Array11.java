@@ -10,9 +10,9 @@ public class Array11 {
         int n = sc.nextInt();
 
         // 입력 받아서 배열에 저장
-        int[][] inputs = new int[n][n];
-        for(int i=0; i<n; i++){
-            for(int j=0; j<n; j++){
+        int[][] inputs = new int[n+1][6];
+        for(int i=1; i<n+1; i++){
+            for(int j=1; j<n+1; j++){
                 inputs[i][j] = sc.nextInt();
             }
         }
@@ -20,30 +20,23 @@ public class Array11 {
         // 배열 안에서 같은 반 최대 횟수 구하기
         int max=0;
         for(int i=1; i<n; i++){
+            int cnt=0;
             for(int j=0; j<n; j++){
                 for(int k=0; k<6; k++){
-
+                    if(inputs[i][k]==inputs[j][k]){
+                        cnt++;
+                        break;
+                    }
                 }
+            }
+            if(cnt>max){
+                max=cnt;
+                System.out.println(i);
             }
         }
 
 
         /*
-5
-2 3 1 7 3
-4 1 9 6 8
-5 5 2 4 4
-6 5 2 6 7
-8 4 2 2 2
-
-00
-10
-20
-30
-40
-
-         */
-
         int max = 0;
         int cnt = 0;
         for(int i=0; i<=5; i++){
@@ -53,6 +46,9 @@ public class Array11 {
                 }
             }
         }
+         */
+
+
     }
 }
 
