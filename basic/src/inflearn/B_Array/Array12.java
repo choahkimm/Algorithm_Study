@@ -1,8 +1,40 @@
 package inflearn.B_Array;
 
-public class Array12 {
-// 12. 멘토링
+import java.util.Arrays;
+import java.util.Scanner;
 
+public class Array12 {
+    // 12. 멘토링
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int stu = sc.nextInt();
+        int test = sc.nextInt();
+
+    /*
+    4 3 (학생수, 테스트 수)
+    3 4 1 2
+    4 3 2 1
+    3 1 4 2
+     */
+        int[][] arr = new int[test][stu];
+
+        for (int i = 0; i<test; i++) {
+            for (int j = 0; j<stu; j++) {
+                arr[i][j] = sc.nextInt();
+            }
+        }
+       // 다차원 배열 출력 System.out.println(Arrays.deepToString(arr));
+
+        for(int i=1; i<=stu; i++){ // 학생1
+            for(int j=1; j<=stu; j++){ // 학생2
+                for(int k=0; k<test; k++){ // 테스트
+                    for(int s=0; s<stu; s++){ // 등수
+
+                    }
+                }
+            }
+        }
+    }
 
 
 }
