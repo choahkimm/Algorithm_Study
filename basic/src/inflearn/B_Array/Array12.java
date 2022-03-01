@@ -25,6 +25,7 @@ public class Array12 {
         }
        // 다차원 배열 출력 System.out.println(Arrays.deepToString(arr));
 
+        // 모든 경우의 수 출력 (완전 탐색 알고리즘?)
         for(int i=1; i<=stu; i++){ // 학생1
             for(int j=1; j<=stu; j++){ // 학생2
                 for(int k=0; k<test; k++){ // 테스트
