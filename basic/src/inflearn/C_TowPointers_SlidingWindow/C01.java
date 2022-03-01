@@ -4,6 +4,8 @@ import java.util.*;
 
 public class C01 {
     //1. 두 배열 합치기
+    // >>> 이 문젠 단순히 배열에 넣어서 sorting 하는 게 아니었다!!
+    // 투포인터 알고리즘(Two Pointers Algorithm) 또는 슬라이딩 윈도우(Sliding Window) 이라는 개념.
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int first = sc.nextInt();
