@@ -1,5 +1,6 @@
 package inflearn.C_TowPointers_SlidingWindow;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class C02 {
@@ -17,6 +18,17 @@ public class C02 {
         for(int i=0; i<m; i++){
             b[i]=sc.nextInt();
         }
+
+        ArrayList<Integer> answer = new ArrayList<>();
+        int p1=0,p2=0;
+        while(p1<n && p2<m){
+            if(a[p1] == b[p2]) answer.add(a[p1]);
+        }
+
+        for(int x : answer){
+            System.out.print(x+" ");
+        }
+
     }
 }
 
