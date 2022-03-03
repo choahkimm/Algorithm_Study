@@ -7,14 +7,16 @@ public class C02 {
     // 2. 공통원소 구하기
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        // n 크기의 a 배열 만들기
         int n = sc.nextInt();
-        int[] a = new int[n];
+        int[] a=new int[n];
         for(int i=0; i<n; i++){
             a[i]=sc.nextInt();
         }
 
+        // m 크기의 b 배열 만들기
         int m = sc.nextInt();
-        int[] b = new int[m];
+        int[] b=new int[m];
         for(int i=0; i<m; i++){
             b[i]=sc.nextInt();
         }
