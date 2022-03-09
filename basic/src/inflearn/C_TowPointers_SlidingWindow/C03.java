@@ -1,9 +1,32 @@
 package inflearn.C_TowPointers_SlidingWindow;
 
+import java.util.Scanner;
+
 public class C03 {
     public static void main(String[] args) {
         //3. 최대 매출 (sliding window)
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int k = sc.nextInt();
+        int[] arr = new int[n];
+        for(int i=0; i<n; i++){
+            arr[i] = sc.nextInt();
+        }
 
+        // 연속된 3일간의 매출 중 가장 큰 매출액 구하기
+        // for문으로 풀어보기 - i부터 k까지 매출액 ----->>>> Runtime Error
+        // 역시나 Sliding window로 풀어야함
+        int answer=0;
+        for(int i=0; i<n-k; i++){
+            int sum=0;
+            for(int j=i; j<i+k; j++ ){
+                sum += arr[j];
+            }
+            if(sum > answer){
+                answer=sum;
+            }
+        }
+        System.out.println(answer);
     }
 }
 
