@@ -1,6 +1,9 @@
 package inflearn.C_TowPointers_SlidingWindow;
 
 public class C03_a {
+    public static void main(String[] args) {
+
+    }
 }
 /*
 4. 연속 부분수열
