@@ -15,16 +15,16 @@ public class C04_a {
         }
 
         // two pointer
-        int lt=0, rt=0;
-        int sum=0, cnt=0;
-        while(lt<n && rt<n){
-            for(int i=lt; i<n; i++){
-                sum+=arr[i];
-            }
-            if(sum==m){
-                cnt++;
+        int lt=0, sum=0, answer=0;
+        for(int rt=0; rt<n; rt++){
+            sum += arr[rt];
+            if(sum==m) answer++;
+            while(sum>=m){
+                sum -= arr[lt++];
+                if(sum==m) answer++;
             }
         }
+        System.out.println(answer);
     }
 }
 
