@@ -1,6 +1,9 @@
 package inflearn.C_TowPointers_SlidingWindow;
 
 public class C05 {
+    public static void main(String[] args) {
+
+    }
 }
 /*
 5. 연속된 자연수의 합
