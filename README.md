@@ -7,7 +7,7 @@ java based
 1. String(문자열)
 2. Array(1, 2차원 배열)
 3. Two pointers, Sliding window[효율성 : O(n^2)-->O(n)]
-![image](https://user-images.githubusercontent.com/79804082/156911919-719533c1-57a3-45c7-af27-33ba9abc7346.png)
+![알고리즘-1](https://user-images.githubusercontent.com/79804082/159112531-e6a1a90c-6833-4f40-b2cd-d4a623205e31.jpg)
 
 4. HashMap, TreeSet (해쉬, 정렬지원 Set)
 5. Stack, Queue(자료구조)
