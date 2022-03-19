@@ -11,7 +11,6 @@ public class C05 {
         // 1  2  3 4 5 6 7 8 9 10 11 12 13 14 15
 
         // 풀이 - two pointer?
-        int[] arr = new int[n];
         int pl=1, pr=2, sum=pl, answer=0;
         while (pr<n){
             sum += pr;
