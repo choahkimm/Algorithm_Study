@@ -13,7 +13,10 @@ public class C05_math {
         while(n>0){
             cnt++;
             n=n-cnt;
-            if(n%cnt==0) answer++; // 연속된 자연수가 가능한 경우
+            if(n%cnt==0){
+                System.out.println("참되는경우:" + n + " " + cnt);
+                answer++; // 연속된 자연수가 가능한 경우
+            }
         }
         System.out.println(answer);
     }
