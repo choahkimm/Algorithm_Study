@@ -1,9 +1,41 @@
 package inflearn.C_TowPointers_SlidingWindow;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class C06 {
+    //6. 최대 길이 연속부분수열
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int k = sc.nextInt();
+
+        int[] arr = new int[n];
+        for(int i=0; i<n; i++){
+            arr[i]= sc.nextInt();
+        }
+
+        int lt=0, rt=0, cnt=0, length=0;
+        while(rt<arr.length){
+            if(arr[rt]==1){
+                rt++;
+            }
+            else {
+                if(cnt<k+1) {
+                    cnt++;
+                    rt++;
+
+                }
+                else { // cnt가 k 크기를 초과하고 0이면 왼쪽의 0을 빼줘야함
+
+                }
+            }
 
 
+        }
+
+
+        System.out.println(Arrays.toString(arr));
 
     }
 }
