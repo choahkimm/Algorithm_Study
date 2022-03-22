@@ -15,27 +15,29 @@ public class C06 {
             arr[i]= sc.nextInt();
         }
 
-        int lt=0, rt=0, cnt=0, length=0;
+        int lt=0, rt=0, cnt=0, length=0, answer=length;
         while(rt<arr.length){
-            if(arr[rt]==1){
-                rt++;
-            }
-            else {
+            if(arr[rt]==1) rt++;
+            else{
                 if(cnt<k+1) {
                     cnt++;
-                    rt++;
-
+                    rt++;  // rt 6
                 }
-                else { // cnt가 k 크기를 초과하고 0이면 왼쪽의 0을 빼줘야함
-
+                else if(cnt>k) { // cnt가 k 크기를 초과하고 0이면 왼쪽의 0을 빼줘야함
+                    while (arr[lt]==0){
+                        lt++;
+                    }
                 }
             }
-
+            length = rt - lt + 1;
+            answer = Math.max(answer, length);
 
         }
 
 
-        System.out.println(Arrays.toString(arr));
+        System.out.println(answer);
+
+
 
     }
 }
