@@ -3,19 +3,32 @@ package inflearn.D_HashMap_HashSet_TreeSet;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class D01 {
+public class D01_a {
+    public static char solution(int n, String s) {
+        //1. 학급 회장(해쉬)
+        char answer=' ';
+
+        HashMap<Character, Integer> map = new HashMap<>();
+        for(char x : s.toCharArray()){
+            map.put(x, map.getOrDefault(x,0)+1);
+        }
+        int max = Integer.MIN_VALUE;
+        for(char key : map.keySet()){
+//            System.out.println(x + " " + map.get(x));
+            if(map.get(key) > max){
+                max= map.get(key);
+                answer = key;
+            }
+        }
+
+        return answer;
+    }
     public static void main(String[] args) {
         // 1. 학급 회장(해쉬)
-
-        // Hash -> key, value
-        // 1=A, 2=B, 3=C, 4=D
-
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-
-        HashMap <String, String> hashmap = new HashMap<String, String>();
-
-
+        String str = sc.next();
+        System.out.println(solution(n,str));
     }
 
 }
