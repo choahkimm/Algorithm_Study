@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class D01 {
     public static String solution(int n, int v){
         String answer="";
-
         return answer;
     }
     public static void main(String[] args) {
