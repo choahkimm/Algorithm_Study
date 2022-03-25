@@ -10,7 +10,10 @@ public class D01_a {
 
         HashMap<Character, Integer> map = new HashMap<>();
         for(char x : s.toCharArray()){
+            //getOrDefault : 찾는 키가 존재한다면 찾는 키의 값을 반환하고 없다면 기본 값을 반환하는 메서드
             map.put(x, map.getOrDefault(x,0)+1);
+            // key : A B C ..   & value : 1 ,2, 3 ..
+            // 참고 : map.put(x, map.get(x)) 이 아닌 이유 : key값은 있지만 value는 없을 수도 있다.
         }
         int max = Integer.MIN_VALUE;
         for(char key : map.keySet()){
