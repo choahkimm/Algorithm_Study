@@ -10,5 +10,8 @@ public class Hash_prctice {
         map.put("둘",2);
         map.put("셋",3);
         System.out.println(map);
+
+        map.putIfAbsent("가나다", 2521);
+        System.out.println(map);
     }
 }
