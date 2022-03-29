@@ -16,7 +16,7 @@ public class D01_a {
             // 참고 : map.put(x, map.get(x)) 이 아닌 이유 : key값은 있지만 value는 없을 수도 있다.
         }
         int max = Integer.MIN_VALUE;
-        for(char key : map.keySet()){
+        for(char key : map.keySet()){  // keySet()으로 map 탐색
 //            System.out.println(x + " " + map.get(x));
             if(map.get(key) > max){
                 max= map.get(key);
