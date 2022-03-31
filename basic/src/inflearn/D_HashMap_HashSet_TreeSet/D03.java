@@ -1,9 +1,28 @@
 package inflearn.D_HashMap_HashSet_TreeSet;
 
+import java.util.HashMap;
+import java.util.Scanner;
+
 public class D03 {
     //3. 매출액의 종류
     public static void main(String[] args) {
         // sliding window로 데이터 뽑아서 Map에 저장해서 하면 될듯?
+
+        //20 12 20 10 23 17 10 / k=4
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int k = sc.nextInt();
+
+        int[] arr = new int[n];
+        for(int i=0; i<arr.length; i++){
+            arr[i] = sc.nextInt();
+        }
+        HashMap<Integer, Integer> map = new HashMap<>();
+        int rt=k;
+
+        for(int lt=3; lt<n; lt++){
+            map.put(arr[lt], map.getOrDefault(lt,0)+1);
+        }
 
     }
 }
