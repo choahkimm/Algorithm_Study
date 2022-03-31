@@ -1,5 +1,6 @@
 package inflearn.D_HashMap_HashSet_TreeSet;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -13,17 +14,18 @@ public class D03 {
         int n = sc.nextInt();
         int k = sc.nextInt();
 
+        // arr에 입력한 매출액을 담기
         int[] arr = new int[n];
         for(int i=0; i<arr.length; i++){
             arr[i] = sc.nextInt();
         }
+
+        //[20, 12, 20, 10, 23, 17, 10]
+        //System.out.println(Arrays.toString(arr));
         HashMap<Integer, Integer> map = new HashMap<>();
-        int rt=k;
-
-        for(int lt=3; lt<n; lt++){
-            map.put(arr[lt], map.getOrDefault(lt,0)+1);
+        int lt=0;
+        for(int rt=k-1; rt<n; rt++){
         }
-
     }
 }
 /*
