@@ -1,9 +1,23 @@
 package inflearn.D_HashMap_HashSet_TreeSet;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class D04 {
     //4. 모든 아나그램 찾기
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.next();
+        String t = sc.next();
 
+        // String으로 문자열 받아서 하나하나 char로 만들어 배열 생성
+        s = String.valueOf(s);
+        char[] array = s.toCharArray(); // toCharArray() 메소드는 문자열을 char형 배열로 바꿔준다.
+//        for(int i=0; i<s.length(); i++){
+//            System.out.println(array[i]);
+//        }
+
+        System.out.println(Arrays.toString(array));
     }
 }
 
