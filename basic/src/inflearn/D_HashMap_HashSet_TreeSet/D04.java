@@ -1,6 +1,7 @@
 package inflearn.D_HashMap_HashSet_TreeSet;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class D04 {
@@ -16,6 +17,21 @@ public class D04 {
 //        for(int i=0; i<s.length(); i++){
 //            System.out.println(array[i]);
 //        }
+
+        int answer=0;
+        HashMap<Character, Integer> hashmap = new HashMap<>();
+        // sliding window
+        for(int i=0; i<t.length(); i++){
+            hashmap.put(t.charAt(i), hashmap.getOrDefault(t.charAt(i),0)+1);
+            hashmap.put(array[i], hashmap.getOrDefault(array[i],0)-1);
+            if(hashmap.containsKey(t.charAt(i)) && hashmap.get(t.charAt(i))==0) answer++;
+        }
+        System.out.println(hashmap);
+        System.out.println(answer);
+        for(int rt=0; rt<s.length(); rt++){
+
+        }
+
 
         System.out.println(Arrays.toString(array));
     }
