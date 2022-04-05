@@ -33,6 +33,7 @@ public class D04 {
         }
 
 
+
         System.out.println(Arrays.toString(array));
     }
 }
