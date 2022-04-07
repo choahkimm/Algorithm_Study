@@ -2,6 +2,7 @@ package inflearn.D_HashMap_HashSet_TreeSet;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class D04 {
@@ -12,29 +13,31 @@ public class D04 {
         String t = sc.next();
 
         // String으로 문자열 받아서 하나하나 char로 만들어 배열 생성
-        s = String.valueOf(s);
+        s = s.toLowerCase(Locale.ROOT);
+        t = t.toLowerCase(Locale.ROOT);
         char[] array = s.toCharArray(); // toCharArray() 메소드는 문자열을 char형 배열로 바꿔준다.
-//        for(int i=0; i<s.length(); i++){
-//            System.out.println(array[i]);
-//        }
 
         int answer=0;
-        HashMap<Character, Integer> hashmap = new HashMap<>();
+        HashMap<Character, Integer> hashmapS = new HashMap<>();
+        HashMap<Character, Integer> hashmapT = new HashMap<>();
+
         // sliding window
         for(int i=0; i<t.length(); i++){
-            hashmap.put(t.charAt(i), hashmap.getOrDefault(t.charAt(i),0)+1);
-            hashmap.put(array[i], hashmap.getOrDefault(array[i],0)-1);
-            if(hashmap.containsKey(t.charAt(i)) && hashmap.get(t.charAt(i))==0) answer++;
+            hashmapT.put(t.charAt(i), hashmapT.getOrDefault(t.charAt(i),0)+1);
+            hashmapS.put(array[i], hashmapS.getOrDefault(array[i],0)+1);
         }
-        System.out.println(hashmap);
+
+        int lt=0;
+        for(int rt=t.length(); rt<s.length(); rt++){
+            if(hashmapT.equals(hashmapS)) answer++;
+
+            hashmapS.put(array[rt], hashmapS.getOrDefault(array[rt],0)+1);
+            hashmapS.put(array[lt], hashmapS.get(array[lt])-1);
+            if(hashmapS.get(array[lt])==0) hashmapS.remove(array[lt]);
+            System.out.println(hashmapS);
+            lt++;
+        }
         System.out.println(answer);
-        for(int rt=0; rt<s.length(); rt++){
-
-        }
-
-
-
-        System.out.println(Arrays.toString(array));
     }
 }
 
