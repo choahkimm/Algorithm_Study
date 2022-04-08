@@ -1,6 +1,5 @@
 package inflearn.D_HashMap_HashSet_TreeSet;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Scanner;
@@ -22,19 +21,20 @@ public class D04 {
         HashMap<Character, Integer> hashmapT = new HashMap<>();
 
         // sliding window
+        for(int i=0; i<t.length()-1; i++){
+            hashmapS.put(array[i], hashmapS.getOrDefault(array[i],0)+1);
+        }
         for(int i=0; i<t.length(); i++){
             hashmapT.put(t.charAt(i), hashmapT.getOrDefault(t.charAt(i),0)+1);
-            hashmapS.put(array[i], hashmapS.getOrDefault(array[i],0)+1);
         }
 
         int lt=0;
-        for(int rt=t.length(); rt<s.length(); rt++){
+        for(int rt=t.length()-1; rt<s.length(); rt++){
+            hashmapS.put(array[rt], hashmapS.getOrDefault(array[rt],0)+1);
             if(hashmapT.equals(hashmapS)) answer++;
 
-            hashmapS.put(array[rt], hashmapS.getOrDefault(array[rt],0)+1);
             hashmapS.put(array[lt], hashmapS.get(array[lt])-1);
             if(hashmapS.get(array[lt])==0) hashmapS.remove(array[lt]);
-            System.out.println(hashmapS);
             lt++;
         }
         System.out.println(answer);
