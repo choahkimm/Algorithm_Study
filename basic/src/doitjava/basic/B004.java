@@ -22,6 +22,7 @@ public class B004 {
         int N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
 
+        // 입력 받은 값
         int A[][] = new int [N+1][N+1];
         for(int i=1; i<=N; i++){
             st=new StringTokenizer(br.readLine());
