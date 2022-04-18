@@ -22,7 +22,7 @@ public class B004 {
         int N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
 
-        // 입력 받은 값
+        // N x N 값들 입력
         int A[][] = new int [N+1][N+1];
         for(int i=1; i<=N; i++){
             st=new StringTokenizer(br.readLine());
@@ -30,6 +30,8 @@ public class B004 {
                 A[i][j] = Integer.parseInt(st.nextToken());
             }
         }
+
+        // 구간 합
         int D[][] = new int[N+1][N+1];
         for(int i=1; i<=N; i++){
             for(int j=1; j<=N; j++){
