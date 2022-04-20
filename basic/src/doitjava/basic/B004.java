@@ -36,7 +36,7 @@ public class B004 {
         for(int i=1; i<=N; i++){
             for(int j=1; j<=N; j++){
                 // 구간 합 구하기 !!!
-                D[i][j] = D[i][j-1] - D[i-1][j] - D[i-1][j-1] + A[i][j];
+                D[i][j] = D[i][j-1] + D[i-1][j] - D[i-1][j-1] + A[i][j];
             }
         }
 

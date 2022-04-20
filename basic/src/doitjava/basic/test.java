@@ -18,4 +18,11 @@ public class test {
 
 `   # 구간 합 구하는 공식 (=i에서 j까지 구간합)
     S[i] - S[j-1]
+
+    # D[i][j]
+    D[i][j] = D[i][j-1] + D[i-1][j] - D[i-1][j-1] + A[i][j]
+
+
+
+
  */
