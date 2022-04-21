@@ -1,5 +1,9 @@
 package doitjava.basic;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+
 public class B005 {
     // 03-2 구간 합
     // 005.나머지 합 구하기 (백준 온라인 저지 10986)
@@ -14,6 +18,12 @@ public class B005 {
     // 3단계 - 슈도코드
     // 4단계 - 코드 구현
 
+    public static void main(String[] args) {
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+    }
     /*
     문제
 수 N개 A1, A2, ..., AN이 주어진다. 이때, 연속된 부분 구간의 합이 M으로 나누어 떨어지는 구간의 개수를 구하는 프로그램을 작성하시오.
@@ -35,5 +45,6 @@ public class B005 {
 
     [예제출력] 7
      */
+
 
 }
