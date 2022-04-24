@@ -23,6 +23,8 @@ public class B005 {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int m = sc.nextInt();
+
+        // 코드 구현
     }
     /*
     문제
