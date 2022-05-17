@@ -9,23 +9,17 @@ public class Leetcode_TwoSum_twoPointers {
     //  Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 
     public static void main(String[] args) {
-        int[] nums = {2, 10, 1, 15};
-        int target = 16;
+        int[] nums = {2, 7, 11, 15};
+        int target = 9;
         System.out.println(Arrays.toString(twoSum(nums, target)));
     }
 
     public static int[] twoSum(int[] nums, int target) {
         // two pointers
-        Arrays.sort(nums);
+        //Arrays.sort(nums);
         int lp = 0;
         int rp = nums.length - 1;
         int result[] = new int[2];
-
-        /*
-                lp->
-                [2 7 11 15]
-                      <-rp
-         */
 
         while(lp < rp) {
             int sum = nums[lp] + nums[rp];
