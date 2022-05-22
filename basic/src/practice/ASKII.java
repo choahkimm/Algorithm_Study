@@ -4,10 +4,14 @@ public class ASKII {
     public static void main(String[] args) {
         // printing letters to numbers
 
-        String upper = "A";
-        char letter = upper.charAt(0); // Convert 0th String -> char type
-        int num = letter; // char -> int
-        System.out.println(num);
+        char upperCase = 'A';
+        char lowerCase = 'a';
+
+        // char -> int
+        int num = upperCase;
+        int num2 = lowerCase;
+        System.out.println(num); // 65
+        System.out.println(num2); // 97
     }
 }
 

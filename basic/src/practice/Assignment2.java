@@ -8,9 +8,9 @@ public class Assignment2 {
         char ch2 = (char) x;
 
         System.out.println(ch); // A
-        System.out.println(x); // 아스키 코드
-        System.out.println(y); // 아스키 코드
-        System.out.println(ch2); // 아스키 코드를 char로 변환
-        System.out.println((char) y); // y를 char로 변환하여 ??
+        System.out.println(x); // Converting characters to ASCII code values : 65
+        System.out.println(y); // 65 + 65 - 8 = 122
+        System.out.println(ch2); // Convert ASCII code to char : A
+        System.out.println((char) y); // Convert 122 to char : z
     }
 }
