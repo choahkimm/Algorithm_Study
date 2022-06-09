@@ -14,5 +14,21 @@ public class Assignment2_3 {
 
         // ternary conditional statment
         System.out.println((a==10)? "true": "false");
+
+
+        // Declaration of Integar type array
+        int[] array;
+        String[] array2;
+
+        int array3[];
+        String array4[];
+
+        // Creating Array
+        array = new int[4];
+        int [] array5 = new int [4];
+
+
+
+
     }
 }
