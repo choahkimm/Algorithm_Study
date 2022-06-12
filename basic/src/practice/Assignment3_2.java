@@ -18,5 +18,6 @@ public class Assignment3_2 {
         }
         System.out.println(str.substring(25)); // I am a very kind girl
         System.out.println(str.substring(11,23)); // Choah Kim an
+
     }
 }
