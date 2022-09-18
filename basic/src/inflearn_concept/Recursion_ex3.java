@@ -26,10 +26,35 @@ public class Recursion_ex3 {
     int search2(int [] data, int begin, int end, int target){
         if(begin>end)
             return -1;
-        else if(target==data[begin])
+        else if(target==data[begin]) //end
             return begin;
+//            return end;
         else
             return search2(data, begin+1, end, target);
+//            return search2(data, begin, end-1, target);
         // recursion을 쓰려면,, 가능하면 명시적으로 매개변수를 지정해주는 것이 좋음
     }
+
+    // ex3) 매개변수의 명시화 : 최대값 찾기
+    int findMax(int [] data, int begin, int end){
+        if(begin==end)
+            return data[begin];
+        else
+            return Math.max(data[begin], findMax(data, begin+1, end));
+    }
+
+    // ex4) 최대값 찾기 다른 버전
+    int findMax2(int [] data, int begin, int end){
+        if(begin==end)
+            return data[begin];
+        else {
+            int middle = (begin+end)/2;
+            int max1 = findMax2(data, begin, middle);
+            int max2 = findMax2(data, middle+1, end);
+            return Math.max(max1, max2);
+        }
+    }
+
+    // 이진검색 알고리즘 Binary Search
+
 }
