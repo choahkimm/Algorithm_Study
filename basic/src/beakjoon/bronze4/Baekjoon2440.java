@@ -1,4 +1,4 @@
-package beakjoon.bronze5;
+package beakjoon.bronze4;
 
 import java.util.Scanner;
 
