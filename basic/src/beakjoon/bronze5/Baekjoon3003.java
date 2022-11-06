@@ -10,9 +10,11 @@ public class Baekjoon3003 {
         int[] chess = new int[]{1, 1, 2, 2, 2, 8}; // 기준점
         int[] array = new int[chess.length];
 
+        // 입력받은 값 저장
         for (int i = 0; i < chess.length; i++) {
             array[i] = sc.nextInt();
         }
+        // 비교 후 출력
         for (int i = 0; i < chess.length; i++) {
             array[i] = chess[i]-array[i];
             System.out.print(array[i] + " ");
