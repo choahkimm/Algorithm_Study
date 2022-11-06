@@ -14,6 +14,7 @@ public class Baekjoon3003 {
         for (int i = 0; i < chess.length; i++) {
             array[i] = sc.nextInt();
         }
+
         // 비교 후 출력
         for (int i = 0; i < chess.length; i++) {
             array[i] = chess[i]-array[i];
