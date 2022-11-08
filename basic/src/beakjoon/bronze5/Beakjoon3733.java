@@ -1,7 +1,10 @@
 package beakjoon.bronze5;
 
-public class Beakjoon3733 {
-    public static void main(String[] args) {
+import java.util.Scanner;
 
+public class Beakjoon3733 {
+    // 백준 3733. Shares
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
     }
 }
