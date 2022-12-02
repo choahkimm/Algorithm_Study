@@ -16,24 +16,19 @@ public class Beakjoon2480 {
         int b = Integer.parseInt(st.nextToken());
         int c = Integer.parseInt(st.nextToken());
 
-        int [] arr = {a,b,c};
-        Arrays.sort(arr);
-        int cnt=0;
-        int num=0;
-        for(int i=0; i<arr.length; i++){
-            for(int j=0; j<arr.length; j++){
-                if(i != j){ // 본인 값 비교 X
-                    if(arr[i]==arr[j]){
-                        cnt ++;
-                        num=arr[i];
-                    }
-                }
-            }
+        if(a==b && b==c) // 같은 눈 3개
+            System.out.println(10000 + a*1000);
+        else if(a==b || a==c) // 같은 눈 2개, a
+            System.out.println(1000 + a*100);
+        else if(b==c) // 같은 눈 2개, b
+            System.out.println(1000 + b*100);
+        else // 모두 다른 눈
+        {
+            int [] arr = {a,b,c};
+            Arrays.sort(arr);
+            System.out.println(arr[2] * 100);
         }
 
-        if(cnt==3) System.out.println(10000 + num*1000);
-        else if(cnt==2) System.out.println(1000 + num*100);
-        else System.out.println(arr[0]*100);
     }
 }
 
