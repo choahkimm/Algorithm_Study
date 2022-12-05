@@ -22,7 +22,6 @@ public class Calculator {
         System.out.println("*총액 : " + sum);
         System.out.println("*인당 내야할 돈 : " + Nsum);
 
-
         Integer maxVal = Collections.max(expenditure.values());
 
         Set<String> foundKeys = new HashSet<>();
@@ -39,12 +38,5 @@ public class Calculator {
                         i+"이(가) 받아야 할 돈 : " + foundKeys+ "-> [" + i+"] "+ (expenditure.get(i) - Nsum ));
             else System.out.println(i+"이(가) 내야 할 돈 : " + foundKeys+ "에게 "+ -1*(expenditure.get(i) - Nsum ));
         }
-
-
-
-
-
-
-//        System.out.println(expenditure);
     }
 }
