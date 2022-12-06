@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Beakjoon2752 {
-    // 백준 2752. 세수정
+    // 백준 2752. 세수정렬
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st =new StringTokenizer(br.readLine());
