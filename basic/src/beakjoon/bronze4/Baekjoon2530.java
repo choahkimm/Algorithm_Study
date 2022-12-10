@@ -24,5 +24,6 @@ public class Baekjoon2530 {
 
         System.out.println( H + " " + M + " " + S);
         br.close();
+        // 정답은 맞는 것 같은데 틀렸다 나옴
     }
 }
