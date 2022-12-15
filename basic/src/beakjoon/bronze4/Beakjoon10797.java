@@ -18,7 +18,5 @@ public class Beakjoon10797 {
             if(n==arr[i]) cnt++;
         }
         System.out.println(cnt);
-
-
     }
 }
