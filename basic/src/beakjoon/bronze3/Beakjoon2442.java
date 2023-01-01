@@ -20,5 +20,6 @@ public class Beakjoon2442 {
             System.out.println();
         }
 
+
     }
 }
