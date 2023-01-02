@@ -10,6 +10,15 @@ public class Beakjoon2443 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
 
+        /*
+
+         *********
+          *******
+           *****
+            ***
+             *
+
+         */
         for(int i=0; i<n; i++){
             for(int h=0; h<i; h++){
                 System.out.print(" ");
