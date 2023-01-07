@@ -26,7 +26,5 @@ public class Beakjoon2506 {
             }
         }
         System.out.println(answer);
-
-
     }
 }
