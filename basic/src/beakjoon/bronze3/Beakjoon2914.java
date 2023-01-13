@@ -11,8 +11,10 @@ public class Beakjoon2914 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
         int a = Integer.parseInt(st.nextToken()); // 수록된 곡
-        int b = Integer.parseInt(st.nextToken()); // 평균값
+        int b = Integer.parseInt(st.nextToken()); // 평균값 (= 앨범 멜로디 개수 / 앨범 수록곡 개수)
 
-        System.out.println();
+        int melody = (b-1)*a;
+
+        System.out.println(melody+1);
     }
 }
