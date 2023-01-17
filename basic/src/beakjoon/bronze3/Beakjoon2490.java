@@ -26,7 +26,6 @@ public class Beakjoon2490 {
             else ans="D";
 
             System.out.println(ans);
-
         }
     }
 }

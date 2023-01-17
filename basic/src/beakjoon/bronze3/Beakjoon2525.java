@@ -28,6 +28,21 @@ public class Beakjoon2525 {
         }
         System.out.println(h>=24? (h-24 + " " +m) : (h + " " +m));
 
+
+
+        // 어렵게 안 풀어도 됐었다..
+            /*
+
+        min += time;
+        while(min >= 60){
+            min -= 60;
+            hour++;
+            if(hour == 24)
+                hour = 0;
+        }
+        System.out.println(hour + " " + min);
+
+             */
     }
 }
 
