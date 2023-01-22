@@ -12,21 +12,20 @@ public class Beakjoon3058 {
         int t = Integer.parseInt(br.readLine());
 
         for(int i=0; i<t; i++){
-            int min = 101; // 입력될 수가 100 이하니까
-            int sum = 0;
-
             StringTokenizer st = new StringTokenizer(br.readLine());
-            while (st.hasMoreTokens()){
+            int sum=0;
+            int min=101; //입력될 값이 100 미만이니까
 
-                int n = Integer.parseInt(st.nextToken());
-                if(n%2==0){
-                    sum+=n;
-                    if(n<min) {
-                        min = n;
+            for(int j=0; j<7; j++){
+                int input = Integer.parseInt(st.nextToken());
+                if(input%2==0){
+                    sum+=input;
+                    if(input<min){
+                        min=input;
                     }
                 }
             }
-                System.out.println(sum+" "+min);
+            System.out.println(sum+ " " + min);
         }
     }
 }
