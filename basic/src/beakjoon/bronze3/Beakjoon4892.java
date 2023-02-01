@@ -24,8 +24,7 @@ public class Beakjoon4892 {
             int n4 = n3/9;
 
             cnt++;
-            if(isEven) n0=2*n4;
-            else n0=2*n4+1;
+            n0 = isEven? 2*n4 : 2*n4+1;
 
             System.out.println(isEven? cnt + ". even " + n4 :
                     cnt + ". odd " + n4 );
