@@ -33,7 +33,5 @@ public class Beakjoon1247 {
             }
             //CompareTo 비교값 == -1이면 음수 ==1이면 양수 == 0 이면 0
         }
-
-
     }
 }
