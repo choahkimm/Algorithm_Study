@@ -16,6 +16,7 @@ public class Beakjoon2061_c {
         int L = Integer.parseInt(st.nextToken());
         int n = 0;
         for(int i=2; i<L; i++){
+            // K와 i를 비교한 나머지가 0인지 아닌지를 판별
             if(K.remainder(BigInteger.valueOf(i)).compareTo(BigInteger.ZERO)==0){
               n=i;
               break;
