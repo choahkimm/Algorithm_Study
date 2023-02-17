@@ -1,6 +1,7 @@
 package beakjoon.bronze5;
 
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Beakjoon11654 {
     // 백준 11654. 아스키 코드
@@ -18,5 +19,13 @@ public class Beakjoon11654 {
         // 주의 - 예외 처리
         int ch = System.in.read();
         System.out.println(ch);
+
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        String s = sc.nextLine();
+
+        System.out.println(n-'1');
+        System.out.println(s);
+
     }
 }
