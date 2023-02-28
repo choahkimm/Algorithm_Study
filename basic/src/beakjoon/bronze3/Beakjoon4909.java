@@ -13,23 +13,23 @@ public class Beakjoon4909 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         while (true){
             StringTokenizer st = new StringTokenizer(br.readLine());
-            double a = Integer.parseInt(st.nextToken());
-            double b = Integer.parseInt(st.nextToken());
-            double c = Integer.parseInt(st.nextToken());
-            double d = Integer.parseInt(st.nextToken());
-            double e = Integer.parseInt(st.nextToken());
-            double f = Integer.parseInt(st.nextToken());
-            if(a==0 && b==0 && c==0 && d==0 && e==0 && f==0) break;
+            double [] arr = new double[6];
 
-            double [] arr = {a,b,c,d,e,f};
-            Arrays.sort(arr);
-
-            double avg = (arr[1]+arr[2]+arr[3]+arr[4])/4.0;
-            if (avg == (int)avg) {
-                System.out.println((int)avg);
-            } else {
-                System.out.println(String.format("%.1f", avg));
+            double sum = 0;
+            for(int i=0; i<6; i++){
+                arr[i] = Double.parseDouble(st.nextToken());
+                sum += arr[i];
             }
+
+            if(sum==0) break;
+
+            // 값을 순차적으로 정렬
+            Arrays.sort(arr);
+            // 최소 최대값을 제외한 값들을 더함
+            sum -= arr[0] + arr[5];
+
+            if(sum%4 == 0) System.out.printf("%.0f\n", sum/4); // 첫 번째 소수점자리수에서 반올림
+            else System.out.println(sum/4);
         }
     }
 }
