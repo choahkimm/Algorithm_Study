@@ -16,10 +16,14 @@ public class Beakjoon5217 {
                     int a= j;
                     int b= n-j;
                     if(a!=b){
-                        s+= (b-a>n/2)? " "+a+" "+b+"," : " "+a+" "+b;
+                        if((n%2==0 && b-a!=2)) {
+                            s += " " + a + " " + b + ",";
+                        }else if(n%2==1 && b-a!=1){
+                            s += " " + a + " " + b + ",";
+                        }else s+= " "+a+" "+b;
                     }
             }
-            System.out.println("Paris for " + n +":" + s );
+            System.out.println("Pairs for " + n +":" + s );
         }
     }
 }
