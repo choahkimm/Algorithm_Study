@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Beakjoon5343 {
+public class Beakjoon5343_c {
     // 백준 5343. Parity Bit
     public static void main(String[] args) throws IOException {
         // 짝수 패리티(Even Parity) 0, 홀수 패리티(Odd) 1
