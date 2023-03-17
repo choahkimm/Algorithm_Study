@@ -15,8 +15,8 @@ public class Beakjoon4619 {
             int b = Integer.parseInt(st.nextToken());
             int n = Integer.parseInt(st.nextToken());
             if(b==0 && n==0) break;
-            int answer =0;
-
+            int answer = 0;
+            int distance = 0;
             for(int i=1; i<=b; i++){
                 if(b <= Math.pow(i,n)){
                     answer = i;
