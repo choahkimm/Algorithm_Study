@@ -9,29 +9,22 @@ public class Beakjoon5354 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int testCase = Integer.parseInt(br.readLine());
-        for(int i=0; i<testCase; i++){
+
+        for (int i = 0; i < testCase; i++) {
+            // 박스 크기
             int n = Integer.parseInt(br.readLine());
-            StringBuilder sb = new StringBuilder();
 
-            for(int j=0; j<n; j++){
-                sb.append("#");
+            // 박스 크기만큼 for문
+            for(int j=0; j<n; j++){ // 행
+                for(int k=0; k<n; k++){ // 열
+                    // 행, 열이 0이거나 n-1
+                    if(j==0 || j==n-1 || k==0 || k==n-1) System.out.print("#");
+                    else System.out.print("J");
+                }
+                System.out.println();
             }
-            System.out.println(sb);
-
-            StringBuilder sb2 = new StringBuilder();
-            sb2.append("#");
-            for(int j=0; j<n-2; j++){
-                sb2.append("J");
-            }
-            sb2.append("#");
-
-
-            for(int j=0; j<n-2; j++){
-                System.out.println(sb2);
-            }
-            System.out.println(sb);
-
             System.out.println();
+
         }
     }
 }
