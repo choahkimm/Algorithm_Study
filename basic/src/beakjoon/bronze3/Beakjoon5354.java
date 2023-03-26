@@ -18,7 +18,8 @@ public class Beakjoon5354 {
             for(int j=0; j<n; j++){ // 행
                 for(int k=0; k<n; k++){ // 열
                     // 행, 열이 0이거나 n-1
-                    if(j==0 || j==n-1 || k==0 || k==n-1) System.out.print("#");
+                    if(j==0 || j==n-1 || k==0 || k==n-1)
+                        System.out.print("#");
                     else System.out.print("J");
                 }
                 System.out.println();
