@@ -16,9 +16,6 @@ public class Beakjoon5768 {
             // x의 범위 : m <= x <= n
             int m = Integer.parseInt(st.nextToken());
             int n = Integer.parseInt(st.nextToken());
-
-            // x는 약수의 총 개수가 가장 큰 수
-            // y는 x의 약수의 개수
             int x = 0, y = 0;
 
             for(int i=m; i<=n; i++) { // m~n 범위
@@ -30,14 +27,12 @@ public class Beakjoon5768 {
                 }
 
                 if(cnt >= y) {
-                    y = cnt; //  y
-                    x = i; //  x
+                    y = cnt; // y는 x의 약수의 개수
+                    x = i; // x는 약수의 총 개수가 가장 큰 수
                 }
             }
-
             bw.write(x + " " + y + "\n");
         }
-
         bw.flush();
         bw.close();
         br.close();
