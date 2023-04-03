@@ -18,18 +18,19 @@ public class Beakjoon24544 {
             int sum2 = 0;
             StringTokenizer st = new StringTokenizer(br.readLine());
             for(int j=0; j<n; j++){
-                contents[i]=Integer.parseInt(st.nextToken());
-                sum += contents[i];
+                contents[j]=Integer.parseInt(st.nextToken());
+                sum += contents[j];
             }
             st = new StringTokenizer(br.readLine());
+
             for(int k=0; k<n; k++){
-                submit[i]=Integer.parseInt(st.nextToken());
+                submit[k]=Integer.parseInt(st.nextToken());
             }
 
             System.out.println(sum);
 
             for(int l=0; l<n; l++){
-                if(submit[i] == 0) sum2+=contents[i];
+                if(submit[l] == 0) sum2+=contents[l];
             }
             System.out.println(sum2);
         }
