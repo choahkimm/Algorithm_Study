@@ -11,28 +11,26 @@ public class Beakjoon24544 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
 
-        for(int i=0; i<n; i++){
-            int [] contents = new int[n];
-            int [] submit = new int [n];
-            int sum = 0;
-            int sum2 = 0;
-            StringTokenizer st = new StringTokenizer(br.readLine());
-            for(int j=0; j<n; j++){
-                contents[j]=Integer.parseInt(st.nextToken());
-                sum += contents[j];
-            }
-            st = new StringTokenizer(br.readLine());
+        int [] contents = new int[n];
+        int [] submit = new int [n];
 
-            for(int k=0; k<n; k++){
-                submit[k]=Integer.parseInt(st.nextToken());
-            }
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int sum = 0;
+        int sum2 = 0;
 
-            System.out.println(sum);
-
-            for(int l=0; l<n; l++){
-                if(submit[l] == 0) sum2+=contents[l];
-            }
-            System.out.println(sum2);
+        for(int j=0; j<n; j++){
+            contents[j]=Integer.parseInt(st.nextToken());
+            sum += contents[j];
         }
+        st = new StringTokenizer(br.readLine());
+
+        for(int k=0; k<n; k++){
+            submit[k]=Integer.parseInt(st.nextToken());
+            if(submit[k] == 0) sum2+=contents[k];
+        }
+
+        System.out.println(sum);
+        System.out.println(sum2);
+
     }
 }
