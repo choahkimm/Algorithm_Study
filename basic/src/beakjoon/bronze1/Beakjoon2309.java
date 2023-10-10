@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class Beakjoon2309 {
     // 백준 2309. 일곱 난쟁이
-    // 브루트포스 알고리즘, 정렬
+    // 완전 탐색 - 브루트포스 알고리즘, 정렬
     public static void main(String[] args) throws IOException {
         // 9개의 줄에 걸쳐 난쟁이들의 키가 주어짐, 7 난쟁이 합은 100
 
@@ -35,7 +35,7 @@ public class Beakjoon2309 {
     }
 
     private static void checkSeven(int[] dwarf, int sum) {
-        for(int i=0; i<9; i++){
+        for(int i=0; i<8; i++){
             for(int j=i+1; j<9; j++){
                 // 합이 100이 아닌 경우 현재 반복에서 난쟁이를 선택하지 않은 채로 다음 조합 검사
                 if(100 !=  sum - dwarf[i] - dwarf[j]){
@@ -45,7 +45,7 @@ public class Beakjoon2309 {
                 dwarf[i] = Integer.MAX_VALUE;
                 dwarf[j] = Integer.MAX_VALUE;
 
-                return;
+                return; // 일곱 난쟁이 찾았을 때 함수 종료
             }
         }
     }
