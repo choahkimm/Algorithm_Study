@@ -10,7 +10,7 @@ public class Beakjoon10986 {
         int problem = sc.nextInt();
         int remain = sc.nextInt();
         long [] S = new long[problem];
-        long [] C = new long[remain];
+        long [] C = new long[remain]; // ex: M=4면 가능한 나머지는 0,1,2,3,4 니까
         long answer =0;
 
         S[0] = sc.nextInt();
