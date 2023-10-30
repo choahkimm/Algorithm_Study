@@ -7,24 +7,24 @@ public class Beakjoon10986 {
     // 백준 10986. 나머지 합
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
-        int problem = sc.nextInt();
-        int remain = sc.nextInt();
-        long [] S = new long[problem];
-        long [] C = new long[remain]; // ex: M=4면 가능한 나머지는 0,1,2,3,4 니까
+        int N = sc.nextInt();
+        int M = sc.nextInt();
+        long [] S = new long[N];
+        long [] C = new long[M]; // ex: M=4면 가능한 나머지는 0,1,2,3,4 니까
         long answer =0;
 
         S[0] = sc.nextInt();
-        for (int i = 1; i <problem ; i++) {
+        for (int i = 1; i <N ; i++) {
             S[i]=S[i-1]+sc.nextInt();
         }
 
-        for (int i = 0; i < problem; i++) {
-            int remainder = (int)(S[i]%remain);
-            if(remainder==0)answer++;
+        for (int i = 0; i < N; i++) {
+            int remainder = (int)(S[i]%M);
+            if(remainder==0) answer++;
             C[remainder]++;
         }
-        for (int i = 0; i < remain; i++) {
-            if(C[i]>1)
+        for (int i = 0; i < M; i++) {
+            if(C[i]>1) // 해당 나머지를 가진 합계가 2 이상일 때문
             {
                 answer = answer + C[i]*(C[i]-1)/2;
             }
