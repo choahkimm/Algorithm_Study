@@ -32,13 +32,16 @@ public class Beakjoon1253 {
         */
 
         for (int k = 0; k < n; k++) {
-            long find = a[k];
+            long target = a[k]; // 서로 더해서 나와야 하는 값
             int i = 0, j = n - 1; // 투 포인터
 
             while (i < j) {
                 // 투 포인터 이동 규칙에 따라
+                int sum = a[i] + a[j]; // sum은 반복문 안에서 값이 계속 바뀌어야 함
 
-                if (a[i] + a[j] == find) { // 좋은 수?
+                // sum이랑 target이랑 같을 경우 한번 더 체크 해준다.
+                // 그래야 자기 자신과 더해서 좋은 수를 찾지 않을 수 있기 때문
+                if ( sum == target) { // 좋은 수?
                     // 투 포인터가 k가 아닐 때 결괏값에 반영 및 while문 종료
                     if (i != k && j != k) {
                         goodNum++;
@@ -51,9 +54,9 @@ public class Beakjoon1253 {
                     } else if (j == k) {
                         j--;
                     }
-                }else if (a[i] + a[j] < find) {
+                }else if (sum < target) {
                         i++;
-                } else if (a[i] + a[j] > find) {
+                } else if (sum > target) {
                         j--;
                 }
             }
@@ -61,3 +64,5 @@ public class Beakjoon1253 {
             System.out.println(goodNum);
     }
 }
+
+// 참고 : https://life-study-1031.tistory.com/22
